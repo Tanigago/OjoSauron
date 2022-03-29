@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> 
+</head>
+
+<body>
+        <div class="ojo">
+            <div class="punto">
+            </div>
+        </div>
+</body>
+
+<script>
+
+    let punto = document.querySelector(".punto");
+let ojo = document.querySelector(".ojo");
+
+document.onmousemove =
+    (e) => {
+        let x = e.clientX * 100 / window.innerWidth + "%";
+        let y = e.clientY * 100 / window.innerHeight + "%";
+
+        punto.style.left = x;
+        punto.style.top = y;
+    }
+</script>
+
+</html>
